@@ -27,6 +27,46 @@
     <!-- <link rel="stylesheet" href="css/" type="text/css"> -->
 
     <script src="js/modernizr.custom.js"></script>
+    <style>
+      .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  /* opacity: 0.7; Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4EA476; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4EA476; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+    </style>
   </head>
 
   <body ng-app="root">
@@ -857,21 +897,21 @@
                           <div class="fields clearfix">
                             <div class="left-column">
                               <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required." ng-model="usr_name">
                                 <label>Full Name</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required." ng-model="usr_email">
                                 <label>Email Address</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
 
                               <div class="form-group form-group-with-icon">
-                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
+                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required." ng-model="usr_subject">
                                 <label>Subject</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
@@ -879,14 +919,18 @@
                             </div>
                             <div class="right-column">
                               <div class="form-group form-group-with-icon">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message." ng-model="usr_msg"></textarea>
                                 <label>Message</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>
                           </div>
-                          <!-- <input type="submit" class="button btn-send" value="Send message"> -->
+                          <!-- <div class="slidecontainer">
+                            <label style="color: #4EA476;">Slide to the right to validate that you are not a Robot.</label>
+                            <input  type="range" min="1" max="100" value="0" class="slider" id="myRange" ng-model="usr_valid">
+                          </div>
+                        <div ng-show="usr_valid>95"><input  type="submit" class="button btn-send" value="Send message"></div> -->
                         </div>
                       </form>
                     </div>
@@ -918,6 +962,12 @@
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
     <script src="./app.js"></script>
+    <script src="./js/bootstrap-notify.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      
+    </script>
 
   </body>
 

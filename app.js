@@ -63,6 +63,53 @@ $scope.projects=[
   // ],tech:['ReactNative','CodeIgniter'],link_name:'',link:null,description:' '},
  
 ]
+
+//send email
+$scope.usr_name=""
+$scope.usr_email=""
+$scope.usr_subject=""
+$scope.usr_msg=""
+$scope.usr_valid=0
+
+$scope.sendEmail =()=>{
+  if($scope.usr_valid>95){
+      Email.send({
+          SecureToken:"468e02f8-48c5-4b94-8850-46129cd0288b",
+          To : ['xavio.wallace@hotmail.com'],
+          From : $scope.usr_email,
+          Subject : $scope.usr_subject,
+          Body : $scope.usr_msg+" Sent by:" +$scope.usr_name
+      }).then(
+        message =>{
+            if(message=="OK"){
+              $.notify({
+                // options
+                message: "Email sent successfully"
+              },{
+                // settings
+                type: 'success'
+              });
+            }else{
+              $.notify({
+                // options
+                message: "Email sending failed"
+              },{
+                // settings
+                type: 'danger'
+              });
+            }
+        }
+      );
+  }else{
+    $.notify({
+      // options
+      message: "Please valid that your not a robot"
+    },{
+      // settings
+      type: 'danger'
+    });
+  }
+}
 $scope.data ={}
 
     
@@ -97,9 +144,11 @@ $scope.data ={}
  $scope.handleClosePort =()=>{
   $scope.portfolio=false
  }
+ 
  daysDiff(d2,today)
 
   }])
+  
  
 
   // .config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider) {
