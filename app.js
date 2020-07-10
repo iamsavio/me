@@ -38,28 +38,28 @@ var app = angular.module("root",[])
     $scope.portfolio=false
 $scope.projects=[
   {id:0,project_name:"VEKTA",project_images:[
-    'vekta1.png' ,'vekta2.png' ,'vekta3.png',
+    'vekta1.jpg' ,'vekta2.jpg' ,'vekta3.jpg',
   ],tech:['CodeIgniter','ReactJs'],link_name:'',link:null,description:''},
   {id:1,project_name:"OVCMIS",project_images:[
-    'ovcmis1.png' ,'ovcmis2.png' ,'ovcmis3.png',
+    'ovcmis1.jpg' ,'ovcmis2.jpg' ,'ovcmis3.jpg',
   ],tech:['CodeIgniter','AngularJs'],link_name:'',link:null,description:' '},
   {id:2,project_name:"SMITH CRAFT TECH",project_images:[
-    'smith1.png' ,'smith2.png' ,'smith3.png',
+    'smith1.jpg' ,'smith2.jpg' ,'smith3.jpg',
   ],tech:['Bootstrap','JQuery'],link_name:'',link:null,description:' '},
   {id:3,project_name:"WOMBO RESTAURANT",project_images:[
-    'wombo1.png' ,'wombo2.png' ,'wombo3.png',
+    'wombo1.jpg' ,'wombo2.jpg' ,'wombo3.jpg',
   ],tech:['Boostrap','AngularJs','CodeIgniter'],link_name:'Wombo Restaurant',link:'https://www.womborestaurant.com',description:' '},
   {id:4,project_name:"YARID",project_images:[
-    'yarid1.png' ,'yarid2.png' ,'yarid3.png',
+    'yarid1.jpg' ,'yarid2.jpg' ,'yarid3.jpg',
   ],tech:['joomla'],link_name:'Young African Refugees for Integral Development',link:'https://www.yarid.org',description:' '},
   {id:5,project_name:"YSU",project_images:[
-    'ysu1.png' ,'ysu2.png' ,'ysu3.png',
+    'ysu1.jpg' ,'ysu2.jpg' ,'ysu3.jpg',
   ],tech:['Boostrap','PHP'],link_name:'Youth Sport Uganda',link:'https://youthsportuganda.org',description:' '},
   {id:6,project_name:"E-STOCK",project_images:[
-    'estock2.png' ,'estock1.png' ,'estock3.png',
+    'estock2.jpg' ,'estock1.jpg' ,'estock3.jpg',
   ],tech:['MDBoostrap','PHP','JQuery'],link_name:'',link:null,description:' '},
   // {id:7,project_name:"E-ATTENDANCE",project_images:[
-  //   'eAttandance1.png' ,'eAttandance2.png' ,
+  //   'eAttandance1.jpg' ,'eAttandance2.jpg' ,
   // ],tech:['ReactNative','CodeIgniter'],link_name:'',link:null,description:' '},
  
 ]
