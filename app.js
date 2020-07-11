@@ -161,7 +161,7 @@ $window.addEventListener("DOMContentLoaded", function() {
   function success() {
     form.reset();
     button.style = "display: none ";
-    status.innerHTML = "Thanks!";
+    status.innerHTML = "Thanks!, I will be getting back to you shortly.";
   }
 
   function error() {
