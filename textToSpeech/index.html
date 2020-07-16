@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html >
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>MailApp</title>
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+   <!-- jQuery -->
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <!-- Bootstrap tooltips -->
+   <script type="text/javascript" src="js/popper.min.js"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <!-- MDB core JavaScript -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <script type="text/javascript" src="angular.min.js"></script>
+   <script type="text/javascript" src="js/angular-route.js"></script>
+   <script type="text/javascript" src="angularjs.voicerss-tts.min.js"></script>
+   <script type="text/javascript" src="app.js"></script>
+   <!-- Your custom scripts (optional) -->
+   <script type="text/javascript">
+    new WOW().init();
+</script>
+        <style>
+                   /* TEMPLATE STYLES */
+
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .extra-margins {
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .jumbotron {
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #3b295a;
+        }
+
+        footer.page-footer {
+            background-color: #3b295a;
+            margin-top: 2rem;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+        </style>
+    </head>
+    <body ng-app="myApp" ng-controller="ctrl">
+        <header>
+
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <div class="container">
+
+              </div>
+            </nav>
+            <!--/.Navbar-->
+          
+          </header>
+          
+            <!--Main layout-->
+            <div class="container">
+          
+              <!--Second row-->
+              <div class="row">
+                <!--First columnn-->
+                <div class="col-lg-12 col-sm-12">
+                  <!--Card-->
+                  <div class="card wow fadeIn" data-wow-delay="0.2s"><!--Card content-->
+                    <div class="card-body">
+                      <!--Title-->
+                      <h4 class="card-title">Text To Speech </h4>
+                      <!--Text-->
+                      <p class="card-text"><textarea  class="form-control" cols="50" rows="40" ng-model="txtToSpeech" placeholder="type your text here..."></textarea></p>
+                      <a href="#!"ng-click="readTxt()"  class="btn btn-info">Read text</a>
+                    </div>
+          
+                  </div>
+                  <!--/.Card-->
+                </div>
+              </div>
+              <!--/.Second row-->
+            </div>
+            <!--/.Main layout-->
+          
+          <!--Footer-->
+          <footer class="page-footer text-center text-md-left mt-4 pt-4">
+          
+            <hr>
+            <!--Copyright-->
+            <div class="footer-copyright py-3 text-center">
+              <div class="container-fluid">
+              <a href="https://iamsavio.github.io/me"> Created  by Savio </a>
+              </div>
+            </div>
+            <!--/.Copyright-->
+          </footer>
+          <!--/.Footer-->
+          
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+    <script>
+        new WOW().init();
+    </script>
+
+</html>
