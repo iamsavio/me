@@ -53,8 +53,9 @@
    <!-- MDB core JavaScript -->
    <script type="text/javascript" src="js/mdb.min.js"></script>
    <script type="text/javascript" src="angular.min.js"></script>
-   <script type="text/javascript" src="js/angular-route.js"></script>
+   <script type="text/javascript" src="angular-route.js"></script>
    <script type="text/javascript" src="angularjs.voicerss-tts.min.js"></script>
+
    <script type="text/javascript" src="app.js"></script>
    <!-- Your custom scripts (optional) -->
  
@@ -91,56 +92,58 @@
         }
         </style>
     </head>
-    <body ng-app="myApp" ng-controller="ctrl">
+    <body ng-app="myApp">
         <header>
 
-            <!--Navbar-->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-              <div class="container">
+           <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
-              </div>
-            </nav>
-            <!--/.Navbar-->
+  <!-- Navbar brand -->
+  <!-- <a class="navbar-brand" href="#"></a> -->
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#!/">Text
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/Bible">Bible</a>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="#!/UploadDoc">Upload files</a> -->
+      </li>
+   
+
+    </ul>
+    <!-- Links -->
+
+    <form class="form-inline">
+      <div class="md-form my-0">
+        <a data-target="_blank" class="text-white" href="https://iamsavio.github.io/me/">Crafted by savio</a>
+      </div>
+    </form>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
           
           </header>
           
             <!--Main layout-->
-            <div class="container">
-          
-              <!--Second row-->
-              <div class="row">
-                <!--First columnn-->
-                <div class="col-lg-12 col-sm-12">
-                  <!--Card-->
-                  <div class="card wow fadeIn" data-wow-delay="0.2s"><!--Card content-->
-                    <div class="card-body">
-                      <!--Title-->
-                      <h4 class="card-title">Text To Speech </h4>
-                      <!--Text-->
-                      <p class="card-text"><textarea  class="form-control" cols="20" rows="10" ng-model="txtToSpeech" placeholder="Type your text here..."></textarea></p>
-                      <a href="#!"ng-click="readTxt()"  class="btn btn-info">Read text</a>
-                    </div>
-          
-                  </div>
-                  <!--/.Card-->
-                </div>
-              </div>
-              <!--/.Second row-->
-            </div>
-            <!--/.Main layout-->
-          
-          <!--Footer-->
-          <footer class="page-footer text-center text-md-left mt-4 pt-4">
-          
-            <hr>
-            <!--Copyright-->
-            <div class="footer-copyright py-3 text-center">
-              <div class="container-fluid">
-              <a href="https://iamsavio.github.io/me"> Created  by Savio </a>
-              </div>
-            </div>
-            <!--/.Copyright-->
-          </footer>
+            <div class="container m-3" >
+               <div ng-view></div>   </div> 
           <!--/.Footer-->
           
         <script type="text/javascript" src="js/index.js"></script>
