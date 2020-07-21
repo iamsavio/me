@@ -53,11 +53,18 @@ $http(req).then((data) => {
 }
 
 $.ajax(settings).done(function (response) {
+  console.log(response)
   let newArray =[]
-  response.data[0].verse.map((txt)=>{
+  if(typeof response.data !=="undefined"){
+response.data[0].verse.map((txt)=>{
    let arr = txt.text.replace(/[&\/\\#+()$~%'":*<>{}]/g, '')
     newArray.push(arr)
   })
+  }else{
+   $scope.txtToSpeech= "The verse you have requested for is not avialable"
+  $scope.readTxt()
+  }
+  
 
   $scope.txtToSpeech= newArray.toString()
   $scope.readTxt()
