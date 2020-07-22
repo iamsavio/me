@@ -55,24 +55,18 @@ $http(req).then((data) => {
 $.ajax(settings).done(function (response) {
   console.log(response)
   let newArray =[]
-  if(typeof response.data !=="undefined"){
+  if(typeof response !=="undefined"){
 response.data[0].verse.map((txt)=>{
    let arr = txt.text.replace(/[&\/\\#+()$~%'":*<>{}]/g, '')
     newArray.push(arr)
   })
   }else{
-   $scope.txtToSpeech= "The verse you have requested for is not avialable"
+   $scope.txtToSpeech= "The verse you have requested for does not exist, please try again"
   $scope.readTxt()
   }
-  
-
   $scope.txtToSpeech= newArray.toString()
   $scope.readTxt()
-
-});
-}
-
-
+})}
   //read text
   $scope.txtToSpeech=""
 $scope.readTxt=()=>{
@@ -87,6 +81,4 @@ $scope.readTxt=()=>{
     });
   }
 }
-
-  
 }]);
