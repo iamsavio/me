@@ -2,13 +2,13 @@
 var app = angular.module('myApp', ['voiceRss','ngRoute']);
 app.config(['$routeProvider',function($routeProvider) {
     $routeProvider
-    .when("/", {
+    .when("/text", {
       templateUrl : "text.html"
     })
     .when("/UploadDoc", {
       templateUrl : "upload.html"
     })
-    .when("/Bible", {
+    .when("/", {
       templateUrl : "bible.html"
     }).otherwise({redirectTo:'/'})
     
