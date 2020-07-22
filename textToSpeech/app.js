@@ -29,7 +29,7 @@ var req = {
 		"x-rapidapi-host": "bible-references.p.rapidapi.com",
 		"x-rapidapi-key": "9422a96803msh3cd21a2ec80bdaep183961jsnceb2210261c7"
 	}
-}
+} 
 $scope.books=[]
 $scope.passage=""
 $scope.chapter=""
