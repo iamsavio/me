@@ -73,11 +73,13 @@ $scope.readTxt=()=>{
   if($scope.txtToSpeech){
      tts.speech({
         src: $scope.txtToSpeech,
-        hl: 'en-us',
+        hl: 'en-gb',
         r: -3, 
+        v:'Harry',
         c: 'mp3',
         f: '44khz_16bit_stereo',
-        ssml: false
+        ssml: false,
+        b64:true
     });
   }
 }

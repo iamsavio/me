@@ -10,7 +10,7 @@
                       <!-- <div class="card-text"> -->
                       <div class="row">
                        <div class="col-12 col-sm-12">
-                                           <div class="form-group"><label for="status-select" class="mr-2">Books(Passages)</label> <select class="custom-select" id="status-select" ng-model="passage">
+                                           <div class="form-group"><label for="status-select" class="mr-2">Books(Passages)</label> <select class="custom-select" id="status-select" ng-model="passage" required>
                                                     <option ng-repeat="book in books" value="{{book}}">{{book}}</option>
                                                     </select></div>
                                             </div>
@@ -20,6 +20,7 @@
                                                class="form-control"
                                                ng-model="chapter"
                                                placeholder="Type the Chapter here..."
+                                               required
                                                >
                                            
                                            </div>
@@ -30,6 +31,7 @@
                                                class="form-control"
                                                ng-model="verse_start"
                                                placeholder="Type the Verse Start here..."
+                                               required
                                                >
                                            
                                            </div>
@@ -40,12 +42,13 @@
                                                class="form-control"
                                                ng-model="verse_end"
                                                placeholder="Type the Verse Stop here..."
+                                               required
                                                >
                                            
                                            </div>
                      
                       </div>
-                      <h5 ng-show ="txtToSpeech" class="text-danger">Please note that the Audio might take a while to play</h5>
+                      <h5 ng-show ="txtToSpeech" class="text-info">Please note that the Audio might take a while to play</h5>
                       <div class="lead p-1">{{txtToSpeech}}</div>
                       </div>
                       <!-- </div> -->
